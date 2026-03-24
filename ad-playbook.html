@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Palma Hotel — Ad Copy & Targeting Playbook</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #1C1C1C; background: #F8F9FA; line-height: 1.65; }
+
+.header {
+  background: linear-gradient(135deg, #1A6B7A, #2D5016);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.3rem; }
+.header p { opacity: 0.8; font-weight: 300; }
+
+.container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+.section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  border: 1px solid #E5E7EB;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+}
+.badge-google { background: #E8F0FE; color: #1A73E8; }
+.badge-meta { background: #F0E6FF; color: #7C3AED; }
+.badge-target { background: #ECFDF5; color: #059669; }
+.badge-budget { background: #FEF3C7; color: #92400E; }
+.badge-retarget { background: #FEE2E2; color: #DC2626; }
+
+h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: #1C1C1C; }
+h3 { font-size: 1rem; font-weight: 700; margin: 1.2rem 0 0.5rem; color: #374151; }
+
+.ad-card {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.ad-card::before {
+  content: 'AD PREVIEW';
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  background: white;
+  padding: 0 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #9CA3AF;
+  letter-spacing: 1.5px;
+}
+
+.ad-headline {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1A0DAB;
+  margin-bottom: 0.2rem;
+}
+
+.ad-url {
+  font-size: 0.8rem;
+  color: #006621;
+  margin-bottom: 0.3rem;
+}
+
+.ad-desc {
+  font-size: 0.88rem;
+  color: #4D5156;
+  line-height: 1.5;
+}
+
+.copy-block {
+  background: #1C1C1C;
+  color: #E5E7EB;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  margin: 0.8rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  position: relative;
+  white-space: pre-wrap;
+}
+
+.copy-label {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  font-size: 0.6rem;
+  color: #6B7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Inter', sans-serif;
+}
+
+.meta-preview {
+  background: white;
+  border: 1px solid #DADDE1;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+  max-width: 500px;
+}
+
+.meta-preview-img {
+  height: 160px;
+  background: linear-gradient(rgba(13, 59, 63, 0.5), rgba(26, 74, 14, 0.4)),
+    url('https://lh3.googleusercontent.com/gps-proxy/ALd4DhGoF2fQQjiuon04P2oVD-q5peJF3Bl0iw3q6Zh0AxKsJWHuSloDA4KqZUahJcvDXZurMH7q7yyqP7pp4NWy_3omZCCZdKihuPondMuoDZm8oJZAj9X9do7IYHzLrx20dT77WXoWm4tsoIqgLpMcb1e5FPQ7o8IeRu703gTox-B9YpsBTyFiYIJh0fOKWNt1YNxQGOI=s1200') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  padding: 1rem;
+  text-align: center;
+}
+
+.meta-preview-body {
+  padding: 1rem 1.2rem;
+}
+
+.meta-preview-body .site { font-size: 0.7rem; color: #65676B; text-transform: uppercase; letter-spacing: 0.5px; }
+.meta-preview-body h4 { font-size: 0.95rem; color: #1C1E21; margin: 0.2rem 0; }
+.meta-preview-body p { font-size: 0.8rem; color: #65676B; }
+
+.tip {
+  background: #FFFBEB;
+  border-left: 3px solid #F59E0B;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.88rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.tip strong { color: #92400E; }
+
+.table-wrap { overflow-x: auto; margin: 1rem 0; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+th {
+  background: #F3F4F6;
+  padding: 0.7rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6B7280;
+}
+td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+
+.stat-card {
+  background: #F9FAFB;
+  border-radius: 10px;
+  padding: 1.2rem;
+  text-align: center;
+  border: 1px solid #E5E7EB;
+}
+.stat-card .num { font-size: 1.5rem; font-weight: 800; color: #1A6B7A; }
+.stat-card .label { font-size: 0.75rem; color: #6B7280; text-transform: uppercase; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Casa Palma Hotel — Ad Playbook</h1>
+  <p>Google Ads + Meta Ads copy, targeting, and budget guide</p>
+</div>
+
+<div class="container">
+
+<!-- ================================ -->
+<!-- GOOGLE ADS -->
+<!-- ================================ -->
+
+<div class="section">
+  <span class="section-badge badge-google">Google Search Ads</span>
+  <h2>Campaign 1: High-Intent Hotel Search</h2>
+  <p style="color: #6B7280; font-size: 0.9rem; margin-bottom: 1.2rem;">These ads target people actively searching for a hotel in Playa del Carmen right now. Highest conversion rate, start here.</p>
+
+  <h3>Ad Group A — Location Keywords</h3>
+  <div class="copy-block"><span class="copy-label">Keywords</span>hotel playa del carmen
+cheap hotel playa del carmen
+hotel near 5th avenue playa del carmen
+budget hotel playa del carmen
+hotel centro playa del carmen
+hotel near cozumel ferry
+hotel near ado bus playa del carmen
+playa del carmen hotel from $28</div>
+
+  <div class="ad-card">
+    <div class="ad-headline">Casa Palma Hotel Playa del Carmen — From $28/Night</div>
+    <div class="ad-url">casapalmahotel.com/book</div>
+    <div class="ad-desc">Steps from 5th Ave & the Beach. A/C, Free Wi-Fi, 24hr Front Desk. 298+ Google Reviews. Book Direct & Save vs Booking.com. Free Late Checkout for Direct Bookings.</div>
+  </div>
+
+  <div class="ad-card">
+    <div class="ad-headline">$28/Night Hotel in Playa del Carmen — Book Direct & Save</div>
+    <div class="ad-url">casapalmahotel.com/rooms</div>
+    <div class="ad-desc">Casa Palma Hotel on Av. Ju&aacute;rez — 2 min walk to beach, 1 min to La Quinta. Clean Rooms, A/C, Free Parking. 4.0&#9733; Google Rating. WhatsApp us for instant booking.</div>
+  </div>
+
+  <h3>Ad Group B — Budget / Value Keywords</h3>
+  <div class="copy-block"><span class="copy-label">Keywords</span>affordable hotel playa del carmen
+best value hotel riviera maya
+cheap accommodation playa del carmen
+hotel under $50 playa del carmen
+backpacker hotel playa del carmen
+hotel deals playa del carmen</div>
+
+  <div class="ad-card">
+    <div class="ad-headline">Best Value Hotel in Playa del Carmen — Casa Palma from $28</div>
+    <div class="ad-url">casapalmahotel.com/deals</div>
+    <div class="ad-desc">Why overpay? Clean, comfortable rooms with A/C from just $28/night. Perfect location — walk to everything. Weekly stay discounts available. Book direct on WhatsApp.</div>
+  </div>
+
+  <h3>Ad Group C — Activity Keywords</h3>
+  <div class="copy-block"><span class="copy-label">Keywords</span>hotel near cozumel ferry playa del carmen
+where to stay playa del carmen
+hotel near playa del carmen beach
+hotel near fundadores park
+hotel near playa del carmen nightlife</div>
+
+  <div class="ad-card">
+    <div class="ad-headline">Stay Steps from the Beach — Casa Palma Hotel $28/Night</div>
+    <div class="ad-url">casapalmahotel.com</div>
+    <div class="ad-desc">Walk to the Cozumel ferry, 5th Avenue, and the Caribbean in minutes. A/C rooms, free Wi-Fi, free parking. Family-run with 298+ happy reviews. Book on WhatsApp now.</div>
+  </div>
+
+  <h3>Ad Extensions to Add</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Extension Type</th><th>Content</th></tr>
+      <tr><td>Sitelinks</td><td>"See Rooms & Prices" | "Location & Map" | "Guest Reviews" | "WhatsApp Booking"</td></tr>
+      <tr><td>Callout</td><td>Free Wi-Fi | Free Parking | A/C All Rooms | 24/7 Front Desk | Walk to Beach</td></tr>
+      <tr><td>Structured Snippet</td><td>Amenities: Air Conditioning, Free Wi-Fi, Parking, Daily Cleaning, Balcony</td></tr>
+      <tr><td>Call Extension</td><td>+52 984 803 2971</td></tr>
+      <tr><td>Location Extension</td><td>Link Google Business Profile</td></tr>
+      <tr><td>Price Extension</td><td>Double Room: $35/night | Double Plus: $45/night | Weekly: $28/night</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ================================ -->
+<!-- META ADS -->
+<!-- ================================ -->
+
+<div class="section">
+  <span class="section-badge badge-meta">Meta / Instagram Ads</span>
+  <h2>Campaign 2: Instagram & Facebook Ads</h2>
+  <p style="color: #6B7280; font-size: 0.9rem; margin-bottom: 1.2rem;">These ads create demand by inspiring people who haven't started searching yet. Best for filling slow periods and building brand awareness.</p>
+
+  <h3>Ad Set A — Awareness / Prospecting (Video or Carousel)</h3>
+
+  <div class="meta-preview">
+    <div class="meta-preview-img">Your $28/Night Home in Paradise</div>
+    <div class="meta-preview-body">
+      <div class="site">casapalmahotel.com</div>
+      <h4>Casa Palma Hotel — Playa del Carmen</h4>
+      <p>Steps from 5th Avenue and the Caribbean Sea. Book direct from $28/night.</p>
+    </div>
+  </div>
+
+  <div class="copy-block"><span class="copy-label">Primary Text — Option 1</span>Skip the overpriced resorts. &#127796;
+
+Casa Palma is a cozy boutique hotel right in the heart of Playa del Carmen — steps from 5th Avenue, the beach, and the Cozumel ferry.
+
+&#10003; Clean rooms with A/C from $28/night
+&#10003; Free Wi-Fi + free parking
+&#10003; 298+ Google Reviews (4.0&#9733;)
+
+Book direct on WhatsApp and get free late checkout.
+Your Caribbean escape doesn't have to cost a fortune.</div>
+
+  <div class="copy-block"><span class="copy-label">Primary Text — Option 2</span>POV: You just checked into a $28/night hotel in Playa del Carmen and it's 2 minutes from the beach &#129312;
+
+Casa Palma Hotel — family-run, A/C, right on Av. Ju&aacute;rez. Walk to everything.
+
+Message us on WhatsApp to book &#128172;</div>
+
+  <div class="copy-block"><span class="copy-label">Headline Options</span>&#8226; Your $28/Night Home in Paradise
+&#8226; Playa del Carmen from $28/Night
+&#8226; Skip the Resort. Stay Like a Local.
+&#8226; 2 Min Walk to the Beach — $28/Night
+&#8226; Best Location in Playa. Best Price Too.</div>
+
+  <h3>Ad Set B — Retargeting (Website Visitors)</h3>
+
+  <div class="copy-block"><span class="copy-label">Primary Text — Retargeting</span>Still thinking about Playa del Carmen? &#127754;
+
+Your room at Casa Palma is waiting. Book direct and we'll throw in free late checkout — so you can sleep in after a night on 5th Avenue. &#128521;
+
+From $28/night. Message us on WhatsApp to lock in your dates.</div>
+
+  <h3>Ad Set C — Promo / Urgency</h3>
+
+  <div class="copy-block"><span class="copy-label">Primary Text — Promo</span>&#128293; LIMITED: Book 4 nights at Casa Palma, get the 5th FREE.
+
+Right in the heart of Playa del Carmen. Walk to the beach, 5th Ave, Cozumel ferry.
+
+&#10003; A/C + Wi-Fi + parking included
+&#10003; 298+ reviews on Google
+&#10003; Direct booking only — message us on WhatsApp
+
+Offer ends [DATE]. Don't sleep on this one &#127796;</div>
+
+  <h3>Video Content Ideas (Reels / Stories)</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Video</th><th>Hook (first 3 sec)</th><th>Length</th></tr>
+      <tr><td>Room reveal</td><td>"$28 a night gets you THIS in Mexico"</td><td>15 sec</td></tr>
+      <tr><td>Walk to beach</td><td>"How far is the beach from our hotel?"</td><td>20 sec</td></tr>
+      <tr><td>5th Ave at night</td><td>"This is your backyard when you stay at Casa Palma"</td><td>15 sec</td></tr>
+      <tr><td>Guest reaction</td><td>"Wait til you see this room for $28"</td><td>10 sec</td></tr>
+      <tr><td>Day in Playa</td><td>"What a $28/night hotel day looks like in Mexico"</td><td>30 sec</td></tr>
+    </table>
+  </div>
+
+  <div class="tip"><strong>Pro tip:</strong> Film these on a phone — polished content actually performs worse than authentic, "real" footage on Instagram and TikTok. Andrea can shoot all 5 in one afternoon.</div>
+</div>
+
+<!-- ================================ -->
+<!-- TARGETING -->
+<!-- ================================ -->
+
+<div class="section">
+  <span class="section-badge badge-target">Targeting Specs</span>
+  <h2>Audience Targeting</h2>
+
+  <h3>Google Ads Targeting</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Setting</th><th>Value</th></tr>
+      <tr><td>Location</td><td>United States, Canada, Mexico (Mexico City, Guadalajara, Monterrey), UK, Germany, France</td></tr>
+      <tr><td>Language</td><td>English, Spanish</td></tr>
+      <tr><td>Device</td><td>All devices (mobile priority — 70%+ of hotel searches are mobile)</td></tr>
+      <tr><td>Schedule</td><td>All day, but increase bids 20% evenings (7-11 PM) when people plan trips</td></tr>
+      <tr><td>Bid Strategy</td><td>Start with Maximize Clicks, switch to Target CPA after 30 conversions</td></tr>
+    </table>
+  </div>
+
+  <h3>Meta Ads Targeting — Prospecting</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Setting</th><th>Value</th></tr>
+      <tr><td>Age</td><td>25-55</td></tr>
+      <tr><td>Location</td><td>US, Canada, Mexico City, UK</td></tr>
+      <tr><td>Interests</td><td>Playa del Carmen, Riviera Maya, Cancun travel, Budget travel, Beach vacations, Backpacking Mexico, Tulum, Caribbean travel</td></tr>
+      <tr><td>Behaviors</td><td>Frequent international travelers, Planning a trip</td></tr>
+      <tr><td>Placements</td><td>Instagram Feed, Instagram Reels, Facebook Feed, Facebook Marketplace</td></tr>
+      <tr><td>Exclusions</td><td>Exclude people who already booked (pixel event)</td></tr>
+    </table>
+  </div>
+
+  <h3>Meta Ads Targeting — Retargeting</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Setting</th><th>Value</th></tr>
+      <tr><td>Custom Audience</td><td>Website visitors (last 14 days) who did NOT complete booking</td></tr>
+      <tr><td>Custom Audience 2</td><td>People who engaged with Instagram/Facebook page (last 30 days)</td></tr>
+      <tr><td>Lookalike</td><td>1% lookalike of past bookers (once you have 100+ conversions)</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ================================ -->
+<!-- BUDGET -->
+<!-- ================================ -->
+
+<div class="section">
+  <span class="section-badge badge-budget">Budget & ROI</span>
+  <h2>Recommended Budget</h2>
+
+  <div class="grid-2" style="margin: 1.5rem 0;">
+    <div class="stat-card">
+      <div class="num">$1,500</div>
+      <div class="label">Monthly Ad Spend</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">$50/day</div>
+      <div class="label">Daily Budget</div>
+    </div>
+  </div>
+
+  <h3>Budget Breakdown</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Channel</th><th>Daily</th><th>Monthly</th><th>Purpose</th></tr>
+      <tr><td>Google Search Ads</td><td>$15/day</td><td>$450</td><td>Capture people actively searching for hotels</td></tr>
+      <tr><td>Google Hotel Ads</td><td>$20/day</td><td>$600</td><td>Show up in Google's hotel pack with pricing</td></tr>
+      <tr><td>Meta — Prospecting</td><td>$10/day</td><td>$300</td><td>Create demand, fill slow periods</td></tr>
+      <tr><td>Meta — Retargeting</td><td>$5/day</td><td>$150</td><td>Convert website visitors who didn't book</td></tr>
+      <tr><td><strong>Total</strong></td><td><strong>$50/day</strong></td><td><strong>$1,500</strong></td><td></td></tr>
+    </table>
+  </div>
+
+  <h3>Expected ROI (Conservative)</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Metric</th><th>Google</th><th>Meta</th></tr>
+      <tr><td>Cost per click</td><td>$0.80 - $1.50</td><td>$0.30 - $0.80</td></tr>
+      <tr><td>Conversion rate</td><td>3-5%</td><td>1-2%</td></tr>
+      <tr><td>Cost per booking</td><td>$20-40</td><td>$25-50</td></tr>
+      <tr><td>Avg. booking value (3 nights)</td><td>$105</td><td>$105</td></tr>
+      <tr><td>Est. monthly bookings from ads</td><td>25-50</td><td>8-15</td></tr>
+      <tr><td>Est. monthly revenue from ads</td><td>$2,600 - $5,250</td><td>$840 - $1,575</td></tr>
+    </table>
+  </div>
+
+  <div class="tip"><strong>Bottom line:</strong> At $1,500/month spend, you should generate $3,400 - $6,800 in additional monthly revenue. That's a 2x-4.5x return. As you optimize over 2-3 months, this improves significantly.</div>
+</div>
+
+<!-- ================================ -->
+<!-- SETUP CHECKLIST -->
+<!-- ================================ -->
+
+<div class="section">
+  <span class="section-badge badge-retarget">Setup Checklist</span>
+  <h2>What You Need Before Launching</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>#</th><th>Task</th><th>Why</th></tr>
+      <tr><td>1</td><td>Register a domain (casapalmahotel.com)</td><td>Google Ads quality score tanks without a real domain</td></tr>
+      <tr><td>2</td><td>Host the landing page on that domain</td><td>Free hosting: Cloudflare Pages, Netlify, or Vercel</td></tr>
+      <tr><td>3</td><td>Create a Google Ads account</td><td>ads.google.com — use Andrea's Google account</td></tr>
+      <tr><td>4</td><td>Link Google Business Profile to Google Ads</td><td>Enables hotel ads and location extensions</td></tr>
+      <tr><td>5</td><td>Install Meta Pixel on the landing page</td><td>Required for retargeting and conversion tracking</td></tr>
+      <tr><td>6</td><td>Install Google Analytics + conversion tag</td><td>Track which ads drive actual bookings</td></tr>
+      <tr><td>7</td><td>Set up conversion tracking (WhatsApp click = conversion)</td><td>Google and Meta optimize for what you measure</td></tr>
+      <tr><td>8</td><td>Create Meta Business Manager + ad account</td><td>business.facebook.com</td></tr>
+      <tr><td>9</td><td>Film 3-5 short videos (see ideas above)</td><td>Video ads outperform static images 3-5x on Meta</td></tr>
+      <tr><td>10</td><td>Launch Google Search first, add Meta after 1 week</td><td>Google captures existing demand; Meta creates new demand</td></tr>
+    </table>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
